@@ -1,0 +1,8 @@
+##RenderMan RIB-Structure 1.1
+##Scene Bouncing Ball
+##Creator /usr/ucb/vi
+##CreationDate 12:30pm 8/24/89
+##For RenderMan Jones
+##Frames 2
+##Shaders PIXARmarble, PIXARwood, MyUserShader
+##CapabilitiesNeeded ShadingLanguage Displacements

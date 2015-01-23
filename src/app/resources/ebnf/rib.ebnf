@@ -1,0 +1,69 @@
+/* Parser type: LL2 with Backtracking */
+RIB
+        ::= HeaderInformation EOF
+HeaderInformation
+        ::= Line+
+Line    
+        ::= ( Conformance | Scene | Creator | CreationDate | For | Frames | Shaders | Textures | CapabilitiesNeeded ) WS* NL?
+Conformance
+        ::= ('##RenderMan' WS Name)
+Scene
+        ::= ('##Scene' WS Name)
+Creator
+        ::= ('##Creator' WS Name)
+CreationDate
+        ::= ('##CreationDate' WS DateTime)
+For
+        ::= ('##For' WS Name)
+Frames
+        ::= ('##Frames' WS Number)
+Textures
+        ::= ('##Textures' WS Texture+)
+Shaders
+        ::= ('##Shaders' WS Shader+)
+CapabilitiesNeeded
+        ::= ('##CapabilitiesNeeded' WS Feature+)
+Shader
+        ::= NMToken ','? WS?
+Texture
+        ::= NMToken ','? WS?
+Feature
+        ::= NMToken ','? WS?
+          
+<?TOKENS?>
+
+Name    ::= ( [^#x000A#x000D#x000C\"] | WS | NONASCII | ESCAPE )*
+Number
+        ::= [0-9]+
+DateTime
+        ::= ( [^#x000A#x000D#x000C\"] | WS | NONASCII | ESCAPE )*
+NMToken
+        ::= [a-zA-Z]*
+
+STRING  
+        ::= ( STRING1 | STRING2 )
+STRING1 
+        ::= '"' ( [^#x000A#x000D#x000C\"] | '\' | NONASCII | ESCAPE )* '"'
+STRING2 
+        ::= "'" ( [^#x000A#x000D#x000C\'] | '\' | NONASCII | ESCAPE )* "'"
+WS      ::= #x0020
+NL      ::= #x000A
+          | #x000D #x000A
+          | #x000D
+          | #x000C
+NONASCII 
+        ::= [^#x0000-#x007F]
+ESCAPE   
+        ::= UNICODE
+           | '\' [^0-9a-f#x000A#x000D#x000C]
+UNICODE  
+        ::= '\' ONE-TO-SIX-HEX-DIGITS ( #x000D #x000A | [ #x000A#x000D#x0009#x000C] )?
+ONE-TO-SIX-HEX-DIGITS
+        ::= [0-9a-f]
+          | [0-9a-f] [0-9a-f]
+          | [0-9a-f] [0-9a-f] [0-9a-f]
+          | [0-9a-f] [0-9a-f] [0-9a-f] [0-9a-f]
+          | [0-9a-f] [0-9a-f] [0-9a-f] [0-9a-f] [0-9a-f]
+          | [0-9a-f] [0-9a-f] [0-9a-f] [0-9a-f] [0-9a-f] [0-9a-f]
+EOF
+        ::= #x0000
