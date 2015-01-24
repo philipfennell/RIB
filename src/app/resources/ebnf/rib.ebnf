@@ -1,28 +1,14 @@
-/* Parser type: LL2 with Backtracking */
+/* Parser type: LL1 with Backtracking */
 RIB
-        ::= HeaderInformation EOF
-HeaderInformation
-        ::= Line+
-Line    
-        ::= ( Conformance | Scene | Creator | CreationDate | For | Frames | Shaders | Textures | CapabilitiesNeeded ) WS* NL?
-Conformance
-        ::= ('##RenderMan' WS Name)
-Scene
-        ::= ('##Scene' WS Name)
-Creator
-        ::= ('##Creator' WS Name)
-CreationDate
-        ::= ('##CreationDate' WS DateTime)
-For
-        ::= ('##For' WS Name)
-Frames
-        ::= ('##Frames' WS Number)
-Textures
-        ::= ('##Textures' WS Texture+)
-Shaders
-        ::= ('##Shaders' WS Shader+)
-CapabilitiesNeeded
-        ::= ('##CapabilitiesNeeded' WS Feature+)
+        ::= Preamble EOF
+Preamble
+        ::= Command+
+Command    
+        ::= StructuralHint WS* NL?
+StructuralHint
+        ::= ( ('##RenderMan' WS Name) | ('##Scene' WS Name) | ('##Creator' WS Name) | 
+              ('##CreationDate' WS DateTime) | ('##For' WS Name)|  ('##Frames' WS Number) | 
+              ('##Textures' WS Texture+) | ('##Shaders' WS Shader+) | ('##CapabilitiesNeeded' WS Feature+) )
 Shader
         ::= NMToken ','? WS?
 Texture
