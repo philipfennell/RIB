@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file was generated on Fri Jan 23, 2015 17:42 (UTC) by REx v5.32 which is Copyright (c) 1979-2014 by Gunther Rademacher <grd@gmx.net> -->
-<!-- REx command line: rib.ebnf -xslt -tree -main -backtrack -ll 1 -->
+<!-- This file was generated on Sat Jan 24, 2015 09:13 (UTC) by REx v5.32 which is Copyright (c) 1979-2014 by Gunther Rademacher <grd@gmx.net> -->
+<!-- REx command line: rib.ebnf -backtrack -xslt -main -tree -ll 1 -->
 
 <xsl:stylesheet version="2.0"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -431,57 +431,87 @@
   </xsl:function>
 
   <!--~
-   ! Parse the 1st loop of production CapabilitiesNeeded (one or more). Use
-   ! tail recursion for iteratively updating the parser state.
+   ! Parse Shader.
    !
    ! @param $input the input string.
    ! @param $state the parser state.
    ! @return the updated parser state.
   -->
-  <xsl:function name="p:parse-CapabilitiesNeeded-1" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:choose>
-      <xsl:when test="$state[$p:error]">
-        <xsl:sequence select="$state"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:variable name="state" select="p:parse-Feature($input, $state)"/>
-        <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>       <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
-                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
-                                                                                         '##Shaders' | '##Textures' -->
-        <xsl:choose>
-          <xsl:when test="$state[$p:l1] != 4">                                      <!-- NMToken -->
-            <xsl:sequence select="$state"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:sequence select="p:parse-CapabilitiesNeeded-1($input, $state)"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:function>
-
-  <!--~
-   ! Parse CapabilitiesNeeded.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-CapabilitiesNeeded" as="item()+">
+  <xsl:function name="p:parse-Shader" as="item()+">
     <xsl:param name="input" as="xs:string"/>
     <xsl:param name="state" as="item()+"/>
 
     <xsl:variable name="count" select="count($state)"/>
     <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(8, $input, $state)"/>                <!-- '##CapabilitiesNeeded' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:parse-CapabilitiesNeeded-1($input, $state)"/>
+    <xsl:variable name="state" select="p:lookahead1(3, $input, $state)"/>           <!-- NMToken -->
+    <xsl:variable name="state" select="p:shift(4, $input, $state)"/>                <!-- NMToken -->
+    <xsl:variable name="state" select="p:lookahead1(9, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' | ',' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 17">                                        <!-- ',' -->
+          <xsl:variable name="state" select="p:shift(17, $input, $state)"/>         <!-- ',' -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 5">                                         <!-- WS -->
+          <xsl:variable name="state" select="p:memoized($state, 0)"/>
+          <xsl:choose>
+            <xsl:when test="$state[$p:lk] != 0">
+              <xsl:sequence select="$state"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:variable name="backtrack" select="$state"/>
+              <xsl:variable name="state" select="p:strip-result($state)"/>
+              <xsl:variable name="state" select="p:shiftT(5, $input, $state)"/>     <!-- WS -->
+              <xsl:choose>
+                <xsl:when test="not($state[$p:error])">
+                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 0)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 0)"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="($state[$p:l1], subsequence($state, 2))"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:lk] = -1">
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'CapabilitiesNeeded', $count, $begin, $end)"/>
+    <xsl:sequence select="p:reduce($state, 'Shader', $count, $begin, $end)"/>
   </xsl:function>
 
   <!--~
@@ -569,14 +599,14 @@
   </xsl:function>
 
   <!--~
-   ! Parse the 1st loop of production Textures (one or more). Use
+   ! Parse the 1st loop of production StructuralHint (one or more). Use
    ! tail recursion for iteratively updating the parser state.
    !
    ! @param $input the input string.
    ! @param $state the parser state.
    ! @return the updated parser state.
   -->
-  <xsl:function name="p:parse-Textures-1" as="item()+">
+  <xsl:function name="p:parse-StructuralHint-1" as="item()+">
     <xsl:param name="input" as="xs:string"/>
     <xsl:param name="state" as="item()+"/>
 
@@ -594,7 +624,7 @@
             <xsl:sequence select="$state"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:sequence select="p:parse-Textures-1($input, $state)"/>
+            <xsl:sequence select="p:parse-StructuralHint-1($input, $state)"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:otherwise>
@@ -602,119 +632,14 @@
   </xsl:function>
 
   <!--~
-   ! Parse Textures.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-Textures" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(16, $input, $state)"/>               <!-- '##Textures' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:parse-Textures-1($input, $state)"/>
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'Textures', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse Shader.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-Shader" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:lookahead1(3, $input, $state)"/>           <!-- NMToken -->
-    <xsl:variable name="state" select="p:shift(4, $input, $state)"/>                <!-- NMToken -->
-    <xsl:variable name="state" select="p:lookahead1(9, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
-                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
-                                                                                         '##Shaders' | '##Textures' | ',' -->
-    <xsl:variable name="state" as="item()+">
-      <xsl:choose>
-        <xsl:when test="$state[$p:error]">
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 17">                                        <!-- ',' -->
-          <xsl:variable name="state" select="p:shift(17, $input, $state)"/>         <!-- ',' -->
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:sequence select="$state"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
-                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
-                                                                                         '##Shaders' | '##Textures' -->
-    <xsl:variable name="state" as="item()+">
-      <xsl:choose>
-        <xsl:when test="$state[$p:error]">
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 5">                                         <!-- WS -->
-          <xsl:variable name="state" select="p:memoized($state, 0)"/>
-          <xsl:choose>
-            <xsl:when test="$state[$p:lk] != 0">
-              <xsl:sequence select="$state"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:variable name="backtrack" select="$state"/>
-              <xsl:variable name="state" select="p:strip-result($state)"/>
-              <xsl:variable name="state" select="p:shiftT(5, $input, $state)"/>     <!-- WS -->
-              <xsl:choose>
-                <xsl:when test="not($state[$p:error])">
-                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 0)"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 0)"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:sequence select="($state[$p:l1], subsequence($state, 2))"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="state" as="item()+">
-      <xsl:choose>
-        <xsl:when test="$state[$p:error]">
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:lk] = -1">
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:sequence select="$state"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'Shader', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse the 1st loop of production Shaders (one or more). Use
+   ! Parse the 2nd loop of production StructuralHint (one or more). Use
    ! tail recursion for iteratively updating the parser state.
    !
    ! @param $input the input string.
    ! @param $state the parser state.
    ! @return the updated parser state.
   -->
-  <xsl:function name="p:parse-Shaders-1" as="item()+">
+  <xsl:function name="p:parse-StructuralHint-2" as="item()+">
     <xsl:param name="input" as="xs:string"/>
     <xsl:param name="state" as="item()+"/>
 
@@ -732,7 +657,7 @@
             <xsl:sequence select="$state"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:sequence select="p:parse-Shaders-1($input, $state)"/>
+            <xsl:sequence select="p:parse-StructuralHint-2($input, $state)"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:otherwise>
@@ -740,167 +665,145 @@
   </xsl:function>
 
   <!--~
-   ! Parse Shaders.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-Shaders" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(15, $input, $state)"/>               <!-- '##Shaders' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:parse-Shaders-1($input, $state)"/>
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'Shaders', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse Frames.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-Frames" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(12, $input, $state)"/>               <!-- '##Frames' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:lookahead1(1, $input, $state)"/>           <!-- Number -->
-    <xsl:variable name="state" select="p:shift(2, $input, $state)"/>                <!-- Number -->
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'Frames', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse For.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-For" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(11, $input, $state)"/>               <!-- '##For' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>           <!-- Name -->
-    <xsl:variable name="state" select="p:shift(1, $input, $state)"/>                <!-- Name -->
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'For', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse CreationDate.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-CreationDate" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(9, $input, $state)"/>                <!-- '##CreationDate' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:lookahead1(2, $input, $state)"/>           <!-- DateTime -->
-    <xsl:variable name="state" select="p:shift(3, $input, $state)"/>                <!-- DateTime -->
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'CreationDate', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse Creator.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-Creator" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(10, $input, $state)"/>               <!-- '##Creator' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>           <!-- Name -->
-    <xsl:variable name="state" select="p:shift(1, $input, $state)"/>                <!-- Name -->
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'Creator', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse Scene.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-Scene" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(14, $input, $state)"/>               <!-- '##Scene' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>           <!-- Name -->
-    <xsl:variable name="state" select="p:shift(1, $input, $state)"/>                <!-- Name -->
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'Scene', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse Conformance.
-   !
-   ! @param $input the input string.
-   ! @param $state the parser state.
-   ! @return the updated parser state.
-  -->
-  <xsl:function name="p:parse-Conformance" as="item()+">
-    <xsl:param name="input" as="xs:string"/>
-    <xsl:param name="state" as="item()+"/>
-
-    <xsl:variable name="count" select="count($state)"/>
-    <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:shift(13, $input, $state)"/>               <!-- '##RenderMan' -->
-    <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>           <!-- WS -->
-    <xsl:variable name="state" select="p:shift(5, $input, $state)"/>                <!-- WS -->
-    <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>           <!-- Name -->
-    <xsl:variable name="state" select="p:shift(1, $input, $state)"/>                <!-- Name -->
-    <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'Conformance', $count, $begin, $end)"/>
-  </xsl:function>
-
-  <!--~
-   ! Parse the 1st loop of production Line (zero or more). Use
+   ! Parse the 3rd loop of production StructuralHint (one or more). Use
    ! tail recursion for iteratively updating the parser state.
    !
    ! @param $input the input string.
    ! @param $state the parser state.
    ! @return the updated parser state.
   -->
-  <xsl:function name="p:parse-Line-1" as="item()+">
+  <xsl:function name="p:parse-StructuralHint-3" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:choose>
+      <xsl:when test="$state[$p:error]">
+        <xsl:sequence select="$state"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="state" select="p:parse-Feature($input, $state)"/>
+        <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>       <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' -->
+        <xsl:choose>
+          <xsl:when test="$state[$p:l1] != 4">                                      <!-- NMToken -->
+            <xsl:sequence select="$state"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:sequence select="p:parse-StructuralHint-3($input, $state)"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
+  <!--~
+   ! Parse StructuralHint.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-StructuralHint" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:variable name="count" select="count($state)"/>
+    <xsl:variable name="begin" select="$state[$p:e0]"/>
+    <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>           <!-- '##CapabilitiesNeeded' | '##CreationDate' | '##Creator' | '##For' |
+                                                                                         '##Frames' | '##RenderMan' | '##Scene' | '##Shaders' | '##Textures' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 13">                                        <!-- '##RenderMan' -->
+          <xsl:variable name="state" select="p:shift(13, $input, $state)"/>         <!-- '##RenderMan' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>     <!-- Name -->
+          <xsl:variable name="state" select="p:shift(1, $input, $state)"/>          <!-- Name -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 14">                                        <!-- '##Scene' -->
+          <xsl:variable name="state" select="p:shift(14, $input, $state)"/>         <!-- '##Scene' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>     <!-- Name -->
+          <xsl:variable name="state" select="p:shift(1, $input, $state)"/>          <!-- Name -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 10">                                        <!-- '##Creator' -->
+          <xsl:variable name="state" select="p:shift(10, $input, $state)"/>         <!-- '##Creator' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>     <!-- Name -->
+          <xsl:variable name="state" select="p:shift(1, $input, $state)"/>          <!-- Name -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 9">                                         <!-- '##CreationDate' -->
+          <xsl:variable name="state" select="p:shift(9, $input, $state)"/>          <!-- '##CreationDate' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:lookahead1(2, $input, $state)"/>     <!-- DateTime -->
+          <xsl:variable name="state" select="p:shift(3, $input, $state)"/>          <!-- DateTime -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 11">                                        <!-- '##For' -->
+          <xsl:variable name="state" select="p:shift(11, $input, $state)"/>         <!-- '##For' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>     <!-- Name -->
+          <xsl:variable name="state" select="p:shift(1, $input, $state)"/>          <!-- Name -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 12">                                        <!-- '##Frames' -->
+          <xsl:variable name="state" select="p:shift(12, $input, $state)"/>         <!-- '##Frames' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:lookahead1(1, $input, $state)"/>     <!-- Number -->
+          <xsl:variable name="state" select="p:shift(2, $input, $state)"/>          <!-- Number -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 16">                                        <!-- '##Textures' -->
+          <xsl:variable name="state" select="p:shift(16, $input, $state)"/>         <!-- '##Textures' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:parse-StructuralHint-1($input, $state)"/>
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 15">                                        <!-- '##Shaders' -->
+          <xsl:variable name="state" select="p:shift(15, $input, $state)"/>         <!-- '##Shaders' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:parse-StructuralHint-2($input, $state)"/>
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:variable name="state" select="p:shift(8, $input, $state)"/>          <!-- '##CapabilitiesNeeded' -->
+          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:parse-StructuralHint-3($input, $state)"/>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="end" select="$state[$p:e0]"/>
+    <xsl:sequence select="p:reduce($state, 'StructuralHint', $count, $begin, $end)"/>
+  </xsl:function>
+
+  <!--~
+   ! Parse the 1st loop of production Command (zero or more). Use
+   ! tail recursion for iteratively updating the parser state.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-Command-1" as="item()+">
     <xsl:param name="input" as="xs:string"/>
     <xsl:param name="state" as="item()+"/>
 
@@ -918,7 +821,7 @@
           </xsl:when>
           <xsl:otherwise>
             <xsl:variable name="state" select="p:shift(5, $input, $state)"/>        <!-- WS -->
-            <xsl:sequence select="p:parse-Line-1($input, $state)"/>
+            <xsl:sequence select="p:parse-Command-1($input, $state)"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:otherwise>
@@ -926,67 +829,20 @@
   </xsl:function>
 
   <!--~
-   ! Parse Line.
+   ! Parse Command.
    !
    ! @param $input the input string.
    ! @param $state the parser state.
    ! @return the updated parser state.
   -->
-  <xsl:function name="p:parse-Line" as="item()+">
+  <xsl:function name="p:parse-Command" as="item()+">
     <xsl:param name="input" as="xs:string"/>
     <xsl:param name="state" as="item()+"/>
 
     <xsl:variable name="count" select="count($state)"/>
     <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>           <!-- '##CapabilitiesNeeded' | '##CreationDate' | '##Creator' | '##For' |
-                                                                                         '##Frames' | '##RenderMan' | '##Scene' | '##Shaders' | '##Textures' -->
-    <xsl:variable name="state" as="item()+">
-      <xsl:choose>
-        <xsl:when test="$state[$p:error]">
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 13">                                        <!-- '##RenderMan' -->
-          <xsl:variable name="state" select="p:parse-Conformance($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 14">                                        <!-- '##Scene' -->
-          <xsl:variable name="state" select="p:parse-Scene($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 10">                                        <!-- '##Creator' -->
-          <xsl:variable name="state" select="p:parse-Creator($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 9">                                         <!-- '##CreationDate' -->
-          <xsl:variable name="state" select="p:parse-CreationDate($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 11">                                        <!-- '##For' -->
-          <xsl:variable name="state" select="p:parse-For($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 12">                                        <!-- '##Frames' -->
-          <xsl:variable name="state" select="p:parse-Frames($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 15">                                        <!-- '##Shaders' -->
-          <xsl:variable name="state" select="p:parse-Shaders($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:l1] = 16">                                        <!-- '##Textures' -->
-          <xsl:variable name="state" select="p:parse-Textures($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:when test="$state[$p:error]">
-          <xsl:sequence select="$state"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:variable name="state" select="p:parse-CapabilitiesNeeded($input, $state)"/>
-          <xsl:sequence select="$state"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="state" select="p:parse-Line-1($input, $state)"/>
+    <xsl:variable name="state" select="p:parse-StructuralHint($input, $state)"/>
+    <xsl:variable name="state" select="p:parse-Command-1($input, $state)"/>
     <xsl:variable name="state" as="item()+">
       <xsl:choose>
         <xsl:when test="$state[$p:error]">
@@ -1002,18 +858,18 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'Line', $count, $begin, $end)"/>
+    <xsl:sequence select="p:reduce($state, 'Command', $count, $begin, $end)"/>
   </xsl:function>
 
   <!--~
-   ! Parse the 1st loop of production HeaderInformation (one or more). Use
+   ! Parse the 1st loop of production Preamble (one or more). Use
    ! tail recursion for iteratively updating the parser state.
    !
    ! @param $input the input string.
    ! @param $state the parser state.
    ! @return the updated parser state.
   -->
-  <xsl:function name="p:parse-HeaderInformation-1" as="item()+">
+  <xsl:function name="p:parse-Preamble-1" as="item()+">
     <xsl:param name="input" as="xs:string"/>
     <xsl:param name="state" as="item()+"/>
 
@@ -1022,7 +878,7 @@
         <xsl:sequence select="$state"/>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:variable name="state" select="p:parse-Line($input, $state)"/>
+        <xsl:variable name="state" select="p:parse-Command($input, $state)"/>
         <xsl:variable name="state" select="p:lookahead1(6, $input, $state)"/>       <!-- EOF | '##CapabilitiesNeeded' | '##CreationDate' | '##Creator' |
                                                                                          '##For' | '##Frames' | '##RenderMan' | '##Scene' | '##Shaders' |
                                                                                          '##Textures' -->
@@ -1031,7 +887,7 @@
             <xsl:sequence select="$state"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:sequence select="p:parse-HeaderInformation-1($input, $state)"/>
+            <xsl:sequence select="p:parse-Preamble-1($input, $state)"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:otherwise>
@@ -1039,21 +895,21 @@
   </xsl:function>
 
   <!--~
-   ! Parse HeaderInformation.
+   ! Parse Preamble.
    !
    ! @param $input the input string.
    ! @param $state the parser state.
    ! @return the updated parser state.
   -->
-  <xsl:function name="p:parse-HeaderInformation" as="item()+">
+  <xsl:function name="p:parse-Preamble" as="item()+">
     <xsl:param name="input" as="xs:string"/>
     <xsl:param name="state" as="item()+"/>
 
     <xsl:variable name="count" select="count($state)"/>
     <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:parse-HeaderInformation-1($input, $state)"/>
+    <xsl:variable name="state" select="p:parse-Preamble-1($input, $state)"/>
     <xsl:variable name="end" select="$state[$p:e0]"/>
-    <xsl:sequence select="p:reduce($state, 'HeaderInformation', $count, $begin, $end)"/>
+    <xsl:sequence select="p:reduce($state, 'Preamble', $count, $begin, $end)"/>
   </xsl:function>
 
   <!--~
@@ -1069,7 +925,7 @@
 
     <xsl:variable name="count" select="count($state)"/>
     <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:parse-HeaderInformation($input, $state)"/>
+    <xsl:variable name="state" select="p:parse-Preamble($input, $state)"/>
     <xsl:variable name="state" select="p:shift(7, $input, $state)"/>                <!-- EOF -->
     <xsl:variable name="end" select="$state[$p:e0]"/>
     <xsl:sequence select="p:reduce($state, 'RIB', $count, $begin, $end)"/>
