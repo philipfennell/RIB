@@ -6,7 +6,7 @@
     version="2.0">
   
   <xsl:import href="/Users/pfennell/Downloads/rib.xslt"/>
-  <!--<xsl:import href="rib.xslt"/>-->
+  <!--<xsl:import href="rib.xsl"/>-->
   
   <xd:doc scope="stylesheet">
     <xd:desc>
