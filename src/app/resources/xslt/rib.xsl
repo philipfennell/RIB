@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file was generated on Sat Jan 24, 2015 09:13 (UTC) by REx v5.32 which is Copyright (c) 1979-2014 by Gunther Rademacher <grd@gmx.net> -->
-<!-- REx command line: rib.ebnf -backtrack -xslt -main -tree -ll 1 -->
+<!-- This file was generated on Sun Jan 25, 2015 16:51 (UTC) by REx v5.32 which is Copyright (c) 1979-2014 by Gunther Rademacher <grd@gmx.net> -->
+<!-- REx command line: rib.ebnf -xslt -main -tree -ll 1 -backtrack -->
 
 <xsl:stylesheet version="2.0"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -64,9 +64,9 @@
    ! The codepoint to charclass mapping for 7 bit codepoints.
   -->
   <xsl:variable name="p:MAP0" as="xs:integer+" select="
-    38, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 6, 7, 1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, 1, 9, 9, 9, 9,
-    9, 9, 9, 9, 9, 9, 1, 1, 1, 1, 1, 1, 1, 10, 10, 11, 12, 10, 13, 10, 10, 10, 10, 10, 10, 14, 15, 10, 10, 10, 16, 17, 18, 10, 10, 10, 10, 10, 10, 1, 19, 1, 1,
-    1, 1, 20, 21, 22, 23, 24, 25, 10, 26, 27, 10, 10, 28, 29, 30, 31, 32, 10, 33, 34, 35, 36, 10, 10, 37, 10, 10, 1, 1, 1, 1, 1
+    39, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 6, 7, 1, 1, 1, 8, 1, 1, 1, 1, 9, 1, 1, 1, 10, 10, 10,
+    10, 10, 10, 10, 10, 10, 10, 1, 1, 1, 1, 1, 1, 1, 11, 11, 12, 13, 11, 14, 11, 11, 11, 11, 11, 11, 15, 16, 11, 11, 11, 17, 18, 19, 11, 11, 11, 11, 11, 11, 1,
+    20, 1, 1, 1, 1, 21, 22, 23, 24, 25, 26, 11, 27, 28, 11, 11, 29, 30, 31, 32, 33, 11, 34, 35, 36, 37, 11, 11, 38, 11, 11, 1, 1, 1, 1, 1
   "/>
 
   <!--~
@@ -75,10 +75,10 @@
   <xsl:variable name="p:MAP1" as="xs:integer+" select="
     54, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58,
     58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 90, 122, 180, 211, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148,
-    148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 38, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 6, 7, 1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, 1, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10, 10, 11, 12, 10, 13, 10, 10, 10, 10, 10, 10, 14, 15, 10, 10, 10, 16, 17, 18, 10, 10, 10, 10, 10, 10, 1,
-    19, 1, 1, 1, 20, 21, 22, 23, 24, 25, 10, 26, 27, 10, 10, 28, 29, 30, 31, 32, 10, 33, 34, 35, 36, 10, 10, 37, 10, 10, 1, 1, 1, 1, 1
+    148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 148, 39, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 1, 6, 7, 1, 1, 1, 8, 1, 1, 1, 1, 9, 1, 1, 1, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 11, 12, 13, 11, 14, 11, 11, 11, 11, 11, 11, 15, 16, 11, 11, 11, 17, 18, 19, 11, 11, 11, 11, 11,
+    11, 1, 20, 1, 1, 1, 21, 22, 23, 24, 25, 26, 11, 27, 28, 11, 11, 29, 30, 31, 32, 33, 11, 34, 35, 36, 37, 11, 11, 38, 11, 11, 1, 1, 1, 1, 1
   "/>
 
   <!--~
@@ -92,58 +92,65 @@
    ! The token-set-id to DFA-initial-state mapping.
   -->
   <xsl:variable name="p:INITIAL" as="xs:integer+" select="
-    257, 2, 515, 644, 5, 6, 7, 8, 649, 650
+    257, 2, 515, 4, 5, 6, 7, 8, 9, 10, 11, 12
   "/>
 
   <!--~
    ! The DFA transition table.
   -->
   <xsl:variable name="p:TRANSITION" as="xs:integer+" select="
-    1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1124, 867, 624, 1042, 719, 718, 717, 1092, 1092, 1092, 1092,
-    1092, 1092, 1092, 1092, 1092, 779, 637, 624, 1042, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 779, 645, 1122, 1042, 719, 718, 717,
-    1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 806, 657, 954, 661, 880, 879, 878, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 673, 680,
-    624, 1042, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1042, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092,
-    1092, 1092, 1092, 1092, 692, 698, 624, 1042, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1124, 706, 624, 1042, 719, 718, 717, 1092,
-    1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 714, 902, 727, 973, 629, 744, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624,
-    1042, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 760, 1042, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092,
-    1092, 1092, 740, 752, 624, 1042, 719, 718, 717, 1092, 1092, 777, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 787, 1042, 719, 718, 717, 1092, 1092, 1092,
-    1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 719, 718, 717, 1092, 804, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 719, 718,
-    717, 1092, 1092, 1092, 814, 1092, 1092, 1092, 1092, 1092, 740, 752, 826, 1042, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740,
-    752, 844, 1042, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 858, 1042, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092,
-    1092, 1092, 1092, 875, 1032, 1116, 832, 818, 817, 816, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 888, 896, 999, 850, 744, 717, 1092, 1134,
-    1011, 1092, 1092, 1092, 1092, 1092, 1092, 740, 888, 727, 973, 629, 836, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 888, 727, 910, 629,
-    744, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 888, 727, 973, 629, 922, 717, 1092, 1092, 1092, 796, 1092, 1092, 1092, 1092, 1092, 740,
-    888, 940, 948, 967, 744, 985, 1092, 765, 977, 993, 1092, 1092, 1092, 1092, 1092, 740, 888, 727, 973, 629, 744, 717, 1092, 1092, 1092, 1092, 1092, 1092,
-    1092, 1092, 1092, 740, 752, 624, 1007, 719, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 719, 718, 717, 1019, 769,
-    792, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 719, 718, 717, 1021, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 719,
-    1029, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 1040, 864, 717, 1092, 665, 1057, 1092, 1092, 1092, 1092, 1092, 1092,
-    740, 752, 1050, 1042, 719, 718, 717, 1068, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 684, 719, 718, 717, 1092, 1092, 1092, 1092, 1092,
-    1092, 1092, 1092, 1092, 740, 752, 1076, 649, 719, 718, 717, 732, 1091, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 719, 718, 717, 929,
-    1083, 1093, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 719, 914, 1101, 1092, 1092, 1109, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624,
-    1042, 719, 718, 932, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 740, 752, 624, 1042, 959, 718, 717, 1092, 1092, 1092, 1092, 1092, 1092, 1092,
-    1092, 1092, 1060, 1132, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 1092, 0, 257, 257, 515, 515, 0, 0, 0, 0, 302, 559, 0,
-    0, 896, 896, 0, 0, 0, 896, 257, 515, 896, 896, 0, 0, 0, 0, 257, 515, 0, 0, 1536, 0, 910, 910, 0, 0, 0, 0, 274, 532, 0, 0, 0, 0, 0, 74, 0, 0, 257, 0, 515, 0,
-    768, 0, 0, 768, 768, 257, 515, 0, 0, 257, 515, 39, 0, 0, 0, 257, 0, 515, 0, 0, 13, 13, 13, 257, 515, 17, 0, 257, 515, 0, 2304, 257, 515, 0, 0, 257, 515,
-    257, 386, 515, 0, 0, 0, 0, 0, 0, 257, 515, 0, 0, 0, 257, 283, 515, 540, 0, 0, 0, 66, 67, 68, 0, 0, 257, 0, 515, 644, 0, 0, 0, 0, 0, 311, 568, 0, 644, 644,
-    257, 515, 0, 0, 257, 515, 22, 257, 257, 515, 515, 0, 0, 0, 72, 0, 0, 0, 0, 73, 0, 0, 0, 0, 77, 0, 0, 0, 0, 0, 0, 0, 896, 23, 257, 257, 515, 515, 0, 0, 0,
-    78, 0, 0, 0, 0, 86, 0, 1152, 0, 0, 71, 0, 0, 0, 0, 0, 0, 0, 910, 0, 83, 0, 0, 0, 0, 0, 0, 11, 12, 0, 0, 24, 257, 257, 515, 515, 0, 0, 0, 11, 12, 0, 0, 0, 0,
-    0, 311, 568, 57, 25, 257, 257, 515, 515, 0, 0, 0, 44, 0, 302, 559, 48, 49, 26, 257, 257, 515, 515, 0, 0, 0, 52, 0, 0, 257, 515, 0, 0, 257, 515, 11, 0, 12,
-    0, 0, 0, 0, 0, 0, 274, 532, 0, 0, 644, 644, 271, 528, 0, 0, 275, 533, 0, 257, 283, 515, 540, 29, 0, 0, 271, 528, 0, 0, 275, 533, 34, 0, 293, 550, 0, 0, 0,
-    0, 54, 257, 515, 0, 0, 51, 0, 53, 0, 311, 568, 0, 0, 1664, 0, 0, 0, 0, 0, 62, 257, 515, 0, 257, 283, 515, 540, 0, 0, 33, 0, 36, 293, 550, 0, 40, 0, 0, 274,
-    0, 532, 0, 0, 0, 45, 257, 515, 0, 0, 0, 43, 0, 0, 302, 559, 0, 0, 293, 550, 0, 0, 0, 0, 0, 80, 0, 0, 0, 59, 60, 1920, 61, 0, 257, 515, 1280, 0, 84, 85, 0,
-    87, 0, 0, 293, 550, 0, 0, 0, 41, 35, 0, 257, 515, 0, 0, 0, 0, 79, 0, 0, 0, 63, 64, 0, 0, 0, 0, 0, 0, 69, 0, 50, 0, 0, 0, 0, 257, 515, 0, 0, 11, 12, 42, 0,
-    0, 0, 257, 515, 0, 0, 0, 0, 0, 257, 257, 515, 515, 0, 31, 0, 0, 1792, 0, 0, 0, 0, 0, 0, 1024, 1024, 0, 65, 0, 0, 0, 0, 0, 70, 0, 257, 257, 515, 515, 30, 32,
-    0, 0, 2048, 0, 0, 0, 0, 2176, 1408, 0, 0, 0, 0, 0, 0, 0, 0, 82, 58, 0, 0, 0, 0, 0, 257, 515, 76, 0, 0, 0, 0, 0, 81, 0, 11, 11, 12, 12, 0, 0, 0, 257, 0, 515,
-    0, 0, 0, 0, 0, 1024, 1024, 0, 0, 0, 0, 0, 0, 75, 0
+    1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 640, 1039, 1040, 651, 1038, 770, 1039, 1167, 836, 1039,
+    1289, 1167, 1167, 1167, 1167, 1167, 1167, 686, 698, 651, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 1167, 686, 849, 987, 847,
+    919, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 1167, 711, 1072, 1013, 1070, 723, 662, 1167, 666, 662, 1355, 1167, 1167, 1167, 1167, 1167,
+    736, 741, 1040, 651, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 690, 861, 1186, 1345, 1343, 753, 1344, 1167, 1055, 1344, 1344,
+    1167, 1167, 1167, 1167, 1167, 640, 764, 833, 651, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 781, 670, 1271, 794, 1038, 1107,
+    670, 1167, 674, 670, 1324, 1167, 1167, 1167, 1167, 1167, 640, 801, 1040, 651, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 815,
+    873, 1020, 826, 1129, 844, 1204, 1167, 857, 1059, 1289, 1167, 1167, 1167, 1167, 1167, 869, 881, 1040, 651, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167,
+    1167, 1167, 1167, 1167, 869, 881, 1040, 905, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 930, 937, 1040, 651, 1038, 770, 1039,
+    1167, 836, 1039, 1289, 1167, 658, 1167, 1167, 1167, 869, 881, 1040, 945, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 869, 881,
+    1040, 651, 1038, 770, 1039, 1167, 836, 1039, 1289, 1200, 1167, 1167, 1167, 1167, 869, 881, 1040, 651, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167,
+    994, 1167, 1167, 869, 881, 1040, 960, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 869, 881, 1040, 980, 1038, 770, 1039, 1167, 836,
+    1039, 1289, 1167, 1167, 1167, 1167, 1167, 869, 881, 1040, 1006, 1038, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 1035, 678, 728, 1048,
+    726, 1067, 727, 1167, 1080, 727, 1334, 1167, 1167, 1167, 1167, 1167, 869, 1092, 1020, 826, 1100, 1118, 952, 1126, 857, 1059, 1289, 1167, 1137, 1167, 1167,
+    1167, 869, 1092, 1020, 826, 1129, 844, 1204, 1167, 1152, 1059, 1289, 1167, 1167, 1167, 1167, 1167, 869, 1092, 1027, 826, 703, 844, 1204, 1167, 857, 1059,
+    1289, 1167, 1167, 1167, 1167, 1167, 869, 1092, 1020, 826, 1129, 844, 1204, 715, 857, 1059, 1289, 1167, 1167, 773, 1166, 1167, 869, 1092, 1176, 826, 912,
+    1194, 1212, 1167, 1220, 1228, 1289, 1110, 1306, 1144, 1167, 1167, 869, 1092, 1020, 826, 1129, 844, 1204, 1167, 857, 1059, 1289, 1167, 1167, 1167, 1167,
+    1167, 869, 881, 1040, 651, 786, 770, 1039, 1167, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 869, 881, 1040, 651, 1038, 770, 1039, 1167, 836, 1039, 1236,
+    643, 818, 1167, 1167, 1167, 869, 881, 1040, 1244, 1038, 770, 1039, 1167, 836, 1039, 1289, 1252, 1167, 1167, 1167, 1167, 869, 881, 1040, 651, 1038, 770,
+    1039, 892, 836, 1039, 1289, 1167, 1167, 1167, 1167, 1167, 869, 881, 1040, 651, 1038, 770, 1261, 756, 836, 1039, 1289, 1253, 998, 1167, 1167, 1167, 869, 881,
+    1040, 651, 1269, 770, 1039, 1167, 836, 1039, 1279, 1287, 1167, 1167, 1167, 1167, 869, 881, 1040, 651, 1038, 887, 1039, 1167, 836, 1039, 1289, 1167, 1167,
+    1167, 1167, 1167, 869, 881, 1040, 651, 1297, 807, 1039, 1305, 836, 1039, 1158, 1183, 1167, 1167, 1167, 1167, 869, 881, 1040, 651, 1038, 770, 1039, 1167,
+    836, 1039, 1314, 1084, 1322, 1332, 1167, 1167, 869, 881, 1040, 651, 1038, 770, 1039, 1168, 745, 1039, 1289, 1167, 967, 1342, 1167, 1167, 869, 881, 1040,
+    651, 1038, 770, 1039, 1167, 836, 972, 1289, 1167, 1167, 1167, 1167, 1167, 869, 881, 1040, 651, 1038, 770, 897, 1167, 836, 1039, 1289, 1167, 1167, 1167,
+    1167, 1167, 922, 1353, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 1167, 257, 0, 515, 0, 0, 0, 0, 0, 0, 99, 0, 0, 257,
+    257, 515, 515, 15, 16, 0, 0, 0, 103, 0, 0, 0, 0, 282, 540, 40, 42, 0, 0, 0, 0, 257, 515, 15, 768, 0, 0, 0, 0, 257, 515, 22, 23, 1024, 0, 1024, 1024, 0, 0,
+    0, 0, 15, 0, 0, 0, 0, 1024, 0, 257, 515, 0, 0, 0, 50, 0, 309, 566, 15, 1042, 0, 1042, 1042, 0, 0, 0, 0, 73, 0, 75, 0, 40, 0, 42, 0, 0, 0, 0, 0, 13, 14, 22,
+    23, 0, 257, 0, 515, 0, 0, 896, 0, 896, 896, 257, 515, 15, 16, 0, 0, 82, 0, 768, 16, 16, 0, 0, 0, 0, 0, 74, 0, 0, 0, 1299, 1299, 1299, 257, 515, 15, 16, 16,
+    0, 0, 0, 0, 0, 0, 112, 0, 257, 0, 515, 0, 16, 0, 0, 0, 51, 0, 257, 515, 15, 0, 257, 257, 515, 515, 15, 768, 0, 0, 0, 2560, 257, 515, 15, 16, 16, 0, 0, 0,
+    1792, 0, 257, 386, 515, 0, 0, 0, 0, 0, 104, 0, 0, 0, 257, 294, 515, 551, 41, 43, 0, 0, 25, 257, 515, 15, 16, 0, 0, 0, 0, 55, 16, 56, 0, 0, 0, 0, 0, 257,
+    515, 0, 0, 0, 333, 590, 79, 80, 0, 0, 0, 0, 257, 515, 768, 16, 257, 0, 515, 644, 0, 0, 0, 0, 276, 533, 15, 16, 0, 644, 644, 644, 257, 515, 15, 16, 16, 0,
+    58, 0, 0, 0, 72, 0, 0, 0, 0, 64, 257, 515, 15, 16, 33, 257, 257, 515, 515, 15, 16, 0, 0, 49, 0, 52, 309, 566, 15, 0, 16, 0, 0, 0, 0, 0, 0, 1152, 1152, 257,
+    0, 515, 644, 0, 0, 17, 17, 644, 644, 644, 257, 515, 15, 16, 34, 257, 257, 515, 515, 15, 16, 0, 0, 63, 0, 321, 578, 67, 68, 35, 257, 257, 515, 515, 15, 16,
+    0, 0, 102, 0, 0, 0, 0, 0, 86, 257, 515, 15, 16, 36, 257, 257, 515, 515, 15, 16, 0, 0, 257, 0, 515, 15, 16, 0, 0, 0, 109, 0, 0, 0, 0, 2048, 0, 0, 0, 37, 257,
+    257, 515, 515, 15, 16, 0, 0, 282, 0, 540, 40, 42, 0, 0, 0, 283, 541, 30, 31, 0, 0, 0, 283, 541, 30, 31, 32, 13, 0, 14, 0, 0, 0, 0, 0, 257, 515, 15, 16, 0,
+    0, 13, 13, 14, 14, 22, 23, 0, 0, 768, 16, 0, 0, 0, 0, 257, 515, 87, 88, 22, 23, 23, 0, 0, 0, 0, 0, 282, 540, 0, 0, 0, 13, 14, 22, 23, 0, 0, 0, 0, 2304, 0,
+    0, 0, 0, 644, 644, 644, 276, 533, 15, 16, 45, 0, 0, 0, 0, 309, 566, 15, 768, 768, 0, 0, 0, 0, 0, 98, 0, 0, 55, 16, 56, 57, 0, 0, 0, 60, 0, 70, 71, 0, 0, 0,
+    0, 0, 309, 566, 15, 101, 0, 0, 0, 0, 0, 105, 0, 0, 1536, 0, 110, 111, 0, 113, 333, 590, 79, 80, 0, 81, 0, 0, 0, 92, 93, 94, 15, 16, 1408, 0, 0, 0, 0, 0, 0,
+    0, 0, 76, 24, 0, 0, 283, 541, 30, 31, 0, 0, 1664, 0, 0, 0, 0, 0, 783, 16, 0, 55, 16, 56, 0, 0, 59, 0, 0, 0, 97, 0, 0, 0, 0, 321, 578, 67, 68, 0, 62, 0, 0,
+    321, 578, 67, 68, 333, 590, 79, 80, 2688, 0, 0, 83, 84, 2176, 85, 0, 257, 515, 87, 88, 89, 90, 0, 0, 0, 0, 15, 16, 0, 257, 257, 515, 515, 15, 16, 44, 95, 0,
+    0, 0, 0, 0, 0, 0, 100, 61, 0, 0, 0, 257, 515, 15, 16, 0, 47, 0, 0, 0, 257, 515, 15, 784, 0, 0, 91, 0, 0, 0, 0, 15, 16, 0, 96, 0, 0, 0, 0, 0, 0, 15, 16, 46,
+    48, 0, 0, 0, 257, 515, 15, 69, 0, 0, 0, 0, 0, 0, 0, 106, 0, 0, 1920, 0, 0, 0, 15, 16, 0, 2432, 0, 0, 0, 0, 0, 0, 15, 768, 0, 108, 0, 0, 0, 0, 0, 0, 22, 23,
+    107, 0, 0, 0, 0, 0, 0, 0, 768, 16, 0, 1152, 0, 0, 0, 0, 0, 0, 0, 40, 42
   "/>
 
   <!--~
    ! The DFA-state to expected-token-set mapping.
   -->
   <xsl:variable name="p:EXPECTED" as="xs:integer+" select="
-    46, 69, 44, 48, 50, 68, 52, 68, 45, 68, 54, 56, 71, 68, 61, 73, 64, 66, 68, 61, 63, 65, 67, 75, 62, 64, 66, 68, 61, 63, 66, 59, 77, 66, 59, 78, 59, 57, 60,
-    60, 60, 58, 58, 58, 32, 130816, 2, 4, 130944, 131040, 131056, 262128, 130816, 64, 8, 1792, 6144, 8192, 256, 256, 512, 256, 1536, 4096, 8192, 16384, 32768,
-    65536, 2, 8, 16, 49152, 65536, 2048, 4096, 8, 256, 1024, 8192, 65536
+    29, 33, 37, 52, 41, 53, 43, 53, 47, 51, 61, 89, 57, 52, 65, 57, 52, 65, 57, 52, 66, 59, 72, 70, 76, 80, 82, 86, 86, 2, 4, 8, 16, 32, 64, 1048832, 1048896,
+    1049024, 523792, 523984, 1048272, 1048576, 128, 523264, 2, 2, 8, 7168, 24576, 32768, 196608, 262144, 2, 8, 32, 32, 1048576, 32768, 65536, 131072, 262144,
+    32, 32, 32, 1048576, 1048576, 1024, 6144, 16384, 32768, 131072, 262144, 1024, 2048, 4096, 32768, 32768, 262144, 1024, 2048, 32768, 1024, 2048, 1024, 2048,
+    1024, 1024, 1024, 1024, 1024, 6144, 8192, 16384
   "/>
 
   <!--~
@@ -155,9 +162,11 @@
     'Number',
     'DateTime',
     'NMToken',
+    'String',
     'WS',
     'NL',
     'EOF',
+    &quot;'#'&quot;,
     &quot;'##CapabilitiesNeeded'&quot;,
     &quot;'##CreationDate'&quot;,
     &quot;'##Creator'&quot;,
@@ -167,7 +176,8 @@
     &quot;'##Scene'&quot;,
     &quot;'##Shaders'&quot;,
     &quot;'##Textures'&quot;,
-    &quot;','&quot;
+    &quot;','&quot;,
+    &quot;'Declare'&quot;
   "/>
 
   <!--~
@@ -307,9 +317,9 @@
 
     <xsl:if test="$state > 0">
       <xsl:for-each select="0 to 0">
-        <xsl:variable name="i0" select=". * 87 + $state - 1"/>
-        <xsl:variable name="i1" select="$i0 idiv 2"/>
-        <xsl:sequence select="p:token((), $p:EXPECTED[$i0 mod 2 + $p:EXPECTED[$i1 + 1] + 1], . * 32 + 1)"/>
+        <xsl:variable name="i0" select=". * 113 + $state - 1"/>
+        <xsl:variable name="i1" select="$i0 idiv 4"/>
+        <xsl:sequence select="p:token((), $p:EXPECTED[$i0 mod 4 + $p:EXPECTED[$i1 + 1] + 1], . * 32 + 1)"/>
       </xsl:for-each>
     </xsl:if>
   </xsl:function>
@@ -347,6 +357,195 @@
   </xsl:function>
 
   <!--~
+   ! Parse the 1st loop of production Declaration (one or more). Use
+   ! tail recursion for iteratively updating the parser state.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-Declaration-1" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:choose>
+      <xsl:when test="$state[$p:error]">
+        <xsl:sequence select="$state"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>       <!-- WS -->
+        <xsl:variable name="state" select="p:shift(6, $input, $state)"/>            <!-- WS -->
+        <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>       <!-- String -->
+        <xsl:variable name="state" select="p:shift(5, $input, $state)"/>            <!-- String -->
+        <xsl:variable name="state" select="p:lookahead1(7, $input, $state)"/>       <!-- WS | EOF | 'Declare' -->
+        <xsl:choose>
+          <xsl:when test="$state[$p:l1] != 6">                                      <!-- WS -->
+            <xsl:sequence select="$state"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:sequence select="p:parse-Declaration-1($input, $state)"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
+  <!--~
+   ! Parse Declaration.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-Declaration" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:variable name="count" select="count($state)"/>
+    <xsl:variable name="begin" select="$state[$p:e0]"/>
+    <xsl:variable name="state" select="p:shift(20, $input, $state)"/>               <!-- 'Declare' -->
+    <xsl:variable name="state" select="p:parse-Declaration-1($input, $state)"/>
+    <xsl:variable name="end" select="$state[$p:e0]"/>
+    <xsl:sequence select="p:reduce($state, 'Declaration', $count, $begin, $end)"/>
+  </xsl:function>
+
+  <!--~
+   ! Parse the 1st loop of production Version (zero or more). Use
+   ! tail recursion for iteratively updating the parser state.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-Version-1" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:choose>
+      <xsl:when test="$state[$p:error]">
+        <xsl:sequence select="$state"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>       <!-- WS | NL | EOF | 'Declare' -->
+        <xsl:choose>
+          <xsl:when test="$state[$p:l1] != 6">                                      <!-- WS -->
+            <xsl:sequence select="$state"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:variable name="state" select="p:shift(6, $input, $state)"/>        <!-- WS -->
+            <xsl:sequence select="p:parse-Version-1($input, $state)"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
+  <!--~
+   ! Parse Version.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-Version" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:variable name="count" select="count($state)"/>
+    <xsl:variable name="begin" select="$state[$p:e0]"/>
+    <xsl:variable name="state" select="p:shift(4, $input, $state)"/>                <!-- NMToken -->
+    <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>           <!-- WS -->
+    <xsl:variable name="state" select="p:shift(6, $input, $state)"/>                <!-- WS -->
+    <xsl:variable name="state" select="p:lookahead1(1, $input, $state)"/>           <!-- Number -->
+    <xsl:variable name="state" select="p:shift(2, $input, $state)"/>                <!-- Number -->
+    <xsl:variable name="state" select="p:parse-Version-1($input, $state)"/>
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 7">                                         <!-- NL -->
+          <xsl:variable name="state" select="p:shift(7, $input, $state)"/>          <!-- NL -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="end" select="$state[$p:e0]"/>
+    <xsl:sequence select="p:reduce($state, 'Version', $count, $begin, $end)"/>
+  </xsl:function>
+
+  <!--~
+   ! Parse the 1st loop of production Comment (zero or more). Use
+   ! tail recursion for iteratively updating the parser state.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-Comment-1" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:choose>
+      <xsl:when test="$state[$p:error]">
+        <xsl:sequence select="$state"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>      <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' -->
+        <xsl:choose>
+          <xsl:when test="$state[$p:l1] != 6">                                      <!-- WS -->
+            <xsl:sequence select="$state"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:variable name="state" select="p:shift(6, $input, $state)"/>        <!-- WS -->
+            <xsl:sequence select="p:parse-Comment-1($input, $state)"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
+  <!--~
+   ! Parse Comment.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-Comment" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:variable name="count" select="count($state)"/>
+    <xsl:variable name="begin" select="$state[$p:e0]"/>
+    <xsl:variable name="state" select="p:shift(9, $input, $state)"/>                <!-- '#' -->
+    <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>           <!-- Name -->
+    <xsl:variable name="state" select="p:shift(1, $input, $state)"/>                <!-- Name -->
+    <xsl:variable name="state" select="p:parse-Comment-1($input, $state)"/>
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 7">                                         <!-- NL -->
+          <xsl:variable name="state" select="p:shift(7, $input, $state)"/>          <!-- NL -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="end" select="$state[$p:e0]"/>
+    <xsl:sequence select="p:reduce($state, 'Comment', $count, $begin, $end)"/>
+  </xsl:function>
+
+  <!--~
    ! Parse Feature.
    !
    ! @param $input the input string.
@@ -361,7 +560,7 @@
     <xsl:variable name="begin" select="$state[$p:e0]"/>
     <xsl:variable name="state" select="p:lookahead1(3, $input, $state)"/>           <!-- NMToken -->
     <xsl:variable name="state" select="p:shift(4, $input, $state)"/>                <!-- NMToken -->
-    <xsl:variable name="state" select="p:lookahead1(9, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+    <xsl:variable name="state" select="p:lookahead1(11, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' | ',' -->
     <xsl:variable name="state" as="item()+">
@@ -369,8 +568,8 @@
         <xsl:when test="$state[$p:error]">
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 17">                                        <!-- ',' -->
-          <xsl:variable name="state" select="p:shift(17, $input, $state)"/>         <!-- ',' -->
+        <xsl:when test="$state[$p:l1] = 19">                                        <!-- ',' -->
+          <xsl:variable name="state" select="p:shift(19, $input, $state)"/>         <!-- ',' -->
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:otherwise>
@@ -378,7 +577,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+    <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' -->
     <xsl:variable name="state" as="item()+">
@@ -386,8 +585,8 @@
         <xsl:when test="$state[$p:error]">
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 5">                                         <!-- WS -->
-          <xsl:variable name="state" select="p:memoized($state, 2)"/>
+        <xsl:when test="$state[$p:l1] = 6">                                         <!-- WS -->
+          <xsl:variable name="state" select="p:memoized($state, 5)"/>
           <xsl:choose>
             <xsl:when test="$state[$p:lk] != 0">
               <xsl:sequence select="$state"/>
@@ -395,13 +594,13 @@
             <xsl:otherwise>
               <xsl:variable name="backtrack" select="$state"/>
               <xsl:variable name="state" select="p:strip-result($state)"/>
-              <xsl:variable name="state" select="p:shiftT(5, $input, $state)"/>     <!-- WS -->
+              <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>     <!-- WS -->
               <xsl:choose>
                 <xsl:when test="not($state[$p:error])">
-                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 2)"/>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 5)"/>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 2)"/>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 5)"/>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:otherwise>
@@ -418,7 +617,7 @@
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:when test="$state[$p:lk] = -1">
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:otherwise>
@@ -428,6 +627,87 @@
     </xsl:variable>
     <xsl:variable name="end" select="$state[$p:e0]"/>
     <xsl:sequence select="p:reduce($state, 'Feature', $count, $begin, $end)"/>
+  </xsl:function>
+
+  <!--~
+   ! Try parsing Feature.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:try-Feature" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:variable name="state" select="p:lookahead1(3, $input, $state)"/>           <!-- NMToken -->
+    <xsl:variable name="state" select="p:shiftT(4, $input, $state)"/>               <!-- NMToken -->
+    <xsl:variable name="state" select="p:lookahead1(11, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' | ',' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 19">                                        <!-- ',' -->
+          <xsl:variable name="state" select="p:shiftT(19, $input, $state)"/>        <!-- ',' -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 6">                                         <!-- WS -->
+          <xsl:variable name="state" select="p:memoized($state, 5)"/>
+          <xsl:choose>
+            <xsl:when test="$state[$p:lk] != 0">
+              <xsl:sequence select="$state"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:variable name="backtrack" select="$state"/>
+              <xsl:variable name="state" select="p:strip-result($state)"/>
+              <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>     <!-- WS -->
+              <xsl:choose>
+                <xsl:when test="not($state[$p:error])">
+                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 5)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 5)"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="($state[$p:l1], subsequence($state, 2))"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:lk] = -1">
+          <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>         <!-- WS -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:sequence select="$state"/>
   </xsl:function>
 
   <!--~
@@ -445,7 +725,7 @@
     <xsl:variable name="begin" select="$state[$p:e0]"/>
     <xsl:variable name="state" select="p:lookahead1(3, $input, $state)"/>           <!-- NMToken -->
     <xsl:variable name="state" select="p:shift(4, $input, $state)"/>                <!-- NMToken -->
-    <xsl:variable name="state" select="p:lookahead1(9, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+    <xsl:variable name="state" select="p:lookahead1(11, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' | ',' -->
     <xsl:variable name="state" as="item()+">
@@ -453,8 +733,8 @@
         <xsl:when test="$state[$p:error]">
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 17">                                        <!-- ',' -->
-          <xsl:variable name="state" select="p:shift(17, $input, $state)"/>         <!-- ',' -->
+        <xsl:when test="$state[$p:l1] = 19">                                        <!-- ',' -->
+          <xsl:variable name="state" select="p:shift(19, $input, $state)"/>         <!-- ',' -->
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:otherwise>
@@ -462,7 +742,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+    <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' -->
     <xsl:variable name="state" as="item()+">
@@ -470,8 +750,8 @@
         <xsl:when test="$state[$p:error]">
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 5">                                         <!-- WS -->
-          <xsl:variable name="state" select="p:memoized($state, 0)"/>
+        <xsl:when test="$state[$p:l1] = 6">                                         <!-- WS -->
+          <xsl:variable name="state" select="p:memoized($state, 3)"/>
           <xsl:choose>
             <xsl:when test="$state[$p:lk] != 0">
               <xsl:sequence select="$state"/>
@@ -479,13 +759,13 @@
             <xsl:otherwise>
               <xsl:variable name="backtrack" select="$state"/>
               <xsl:variable name="state" select="p:strip-result($state)"/>
-              <xsl:variable name="state" select="p:shiftT(5, $input, $state)"/>     <!-- WS -->
+              <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>     <!-- WS -->
               <xsl:choose>
                 <xsl:when test="not($state[$p:error])">
-                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 0)"/>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 3)"/>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 0)"/>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 3)"/>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:otherwise>
@@ -502,7 +782,7 @@
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:when test="$state[$p:lk] = -1">
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:otherwise>
@@ -512,6 +792,87 @@
     </xsl:variable>
     <xsl:variable name="end" select="$state[$p:e0]"/>
     <xsl:sequence select="p:reduce($state, 'Shader', $count, $begin, $end)"/>
+  </xsl:function>
+
+  <!--~
+   ! Try parsing Shader.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:try-Shader" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:variable name="state" select="p:lookahead1(3, $input, $state)"/>           <!-- NMToken -->
+    <xsl:variable name="state" select="p:shiftT(4, $input, $state)"/>               <!-- NMToken -->
+    <xsl:variable name="state" select="p:lookahead1(11, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' | ',' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 19">                                        <!-- ',' -->
+          <xsl:variable name="state" select="p:shiftT(19, $input, $state)"/>        <!-- ',' -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 6">                                         <!-- WS -->
+          <xsl:variable name="state" select="p:memoized($state, 3)"/>
+          <xsl:choose>
+            <xsl:when test="$state[$p:lk] != 0">
+              <xsl:sequence select="$state"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:variable name="backtrack" select="$state"/>
+              <xsl:variable name="state" select="p:strip-result($state)"/>
+              <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>     <!-- WS -->
+              <xsl:choose>
+                <xsl:when test="not($state[$p:error])">
+                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 3)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 3)"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="($state[$p:l1], subsequence($state, 2))"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:lk] = -1">
+          <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>         <!-- WS -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:sequence select="$state"/>
   </xsl:function>
 
   <!--~
@@ -529,7 +890,7 @@
     <xsl:variable name="begin" select="$state[$p:e0]"/>
     <xsl:variable name="state" select="p:lookahead1(3, $input, $state)"/>           <!-- NMToken -->
     <xsl:variable name="state" select="p:shift(4, $input, $state)"/>                <!-- NMToken -->
-    <xsl:variable name="state" select="p:lookahead1(9, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+    <xsl:variable name="state" select="p:lookahead1(11, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' | ',' -->
     <xsl:variable name="state" as="item()+">
@@ -537,8 +898,8 @@
         <xsl:when test="$state[$p:error]">
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 17">                                        <!-- ',' -->
-          <xsl:variable name="state" select="p:shift(17, $input, $state)"/>         <!-- ',' -->
+        <xsl:when test="$state[$p:l1] = 19">                                        <!-- ',' -->
+          <xsl:variable name="state" select="p:shift(19, $input, $state)"/>         <!-- ',' -->
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:otherwise>
@@ -546,7 +907,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>           <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+    <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' -->
     <xsl:variable name="state" as="item()+">
@@ -554,8 +915,8 @@
         <xsl:when test="$state[$p:error]">
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 5">                                         <!-- WS -->
-          <xsl:variable name="state" select="p:memoized($state, 1)"/>
+        <xsl:when test="$state[$p:l1] = 6">                                         <!-- WS -->
+          <xsl:variable name="state" select="p:memoized($state, 4)"/>
           <xsl:choose>
             <xsl:when test="$state[$p:lk] != 0">
               <xsl:sequence select="$state"/>
@@ -563,13 +924,13 @@
             <xsl:otherwise>
               <xsl:variable name="backtrack" select="$state"/>
               <xsl:variable name="state" select="p:strip-result($state)"/>
-              <xsl:variable name="state" select="p:shiftT(5, $input, $state)"/>     <!-- WS -->
+              <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>     <!-- WS -->
               <xsl:choose>
                 <xsl:when test="not($state[$p:error])">
-                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 1)"/>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 4)"/>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 1)"/>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 4)"/>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:otherwise>
@@ -586,7 +947,7 @@
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:when test="$state[$p:lk] = -1">
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:otherwise>
@@ -596,6 +957,87 @@
     </xsl:variable>
     <xsl:variable name="end" select="$state[$p:e0]"/>
     <xsl:sequence select="p:reduce($state, 'Texture', $count, $begin, $end)"/>
+  </xsl:function>
+
+  <!--~
+   ! Try parsing Texture.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:try-Texture" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:variable name="state" select="p:lookahead1(3, $input, $state)"/>           <!-- NMToken -->
+    <xsl:variable name="state" select="p:shiftT(4, $input, $state)"/>               <!-- NMToken -->
+    <xsl:variable name="state" select="p:lookahead1(11, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' | ',' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 19">                                        <!-- ',' -->
+          <xsl:variable name="state" select="p:shiftT(19, $input, $state)"/>        <!-- ',' -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>          <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' -->
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:l1] = 6">                                         <!-- WS -->
+          <xsl:variable name="state" select="p:memoized($state, 4)"/>
+          <xsl:choose>
+            <xsl:when test="$state[$p:lk] != 0">
+              <xsl:sequence select="$state"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:variable name="backtrack" select="$state"/>
+              <xsl:variable name="state" select="p:strip-result($state)"/>
+              <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>     <!-- WS -->
+              <xsl:choose>
+                <xsl:when test="not($state[$p:error])">
+                  <xsl:sequence select="p:memoize($backtrack, $state, -1, 4)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:sequence select="p:memoize($backtrack, $state, -2, 4)"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="($state[$p:l1], subsequence($state, 2))"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="state" as="item()+">
+      <xsl:choose>
+        <xsl:when test="$state[$p:error]">
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:when test="$state[$p:lk] = -1">
+          <xsl:variable name="state" select="p:shiftT(6, $input, $state)"/>         <!-- WS -->
+          <xsl:sequence select="$state"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:sequence select="$state"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:sequence select="$state"/>
   </xsl:function>
 
   <!--~
@@ -616,11 +1058,42 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:variable name="state" select="p:parse-Texture($input, $state)"/>
-        <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>       <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+        <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>      <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' -->
+        <xsl:variable name="state" as="item()+">
+          <xsl:choose>
+            <xsl:when test="$state[$p:error]">
+              <xsl:sequence select="$state"/>
+            </xsl:when>
+            <xsl:when test="$state[$p:l1] = 4">                                     <!-- NMToken -->
+              <xsl:variable name="state" select="p:memoized($state, 0)"/>
+              <xsl:choose>
+                <xsl:when test="$state[$p:lk] != 0">
+                  <xsl:sequence select="$state"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:variable name="backtrack" select="$state"/>
+                  <xsl:variable name="state" select="p:strip-result($state)"/>
+                  <xsl:variable name="state" select="p:try-Texture($input, $state)"/>
+                  <xsl:choose>
+                    <xsl:when test="not($state[$p:error])">
+                      <xsl:sequence select="p:memoize($backtrack, $state, -1, 0)"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:sequence select="p:memoize($backtrack, $state, -2, 0)"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:sequence select="($state[$p:l1], subsequence($state, 2))"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
         <xsl:choose>
-          <xsl:when test="$state[$p:l1] != 4">                                      <!-- NMToken -->
+          <xsl:when test="$state[$p:lk] != -1">
             <xsl:sequence select="$state"/>
           </xsl:when>
           <xsl:otherwise>
@@ -649,11 +1122,42 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:variable name="state" select="p:parse-Shader($input, $state)"/>
-        <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>       <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+        <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>      <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' -->
+        <xsl:variable name="state" as="item()+">
+          <xsl:choose>
+            <xsl:when test="$state[$p:error]">
+              <xsl:sequence select="$state"/>
+            </xsl:when>
+            <xsl:when test="$state[$p:l1] = 4">                                     <!-- NMToken -->
+              <xsl:variable name="state" select="p:memoized($state, 1)"/>
+              <xsl:choose>
+                <xsl:when test="$state[$p:lk] != 0">
+                  <xsl:sequence select="$state"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:variable name="backtrack" select="$state"/>
+                  <xsl:variable name="state" select="p:strip-result($state)"/>
+                  <xsl:variable name="state" select="p:try-Shader($input, $state)"/>
+                  <xsl:choose>
+                    <xsl:when test="not($state[$p:error])">
+                      <xsl:sequence select="p:memoize($backtrack, $state, -1, 1)"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:sequence select="p:memoize($backtrack, $state, -2, 1)"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:sequence select="($state[$p:l1], subsequence($state, 2))"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
         <xsl:choose>
-          <xsl:when test="$state[$p:l1] != 4">                                      <!-- NMToken -->
+          <xsl:when test="$state[$p:lk] != -1">
             <xsl:sequence select="$state"/>
           </xsl:when>
           <xsl:otherwise>
@@ -682,11 +1186,42 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:variable name="state" select="p:parse-Feature($input, $state)"/>
-        <xsl:variable name="state" select="p:lookahead1(8, $input, $state)"/>       <!-- NMToken | WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+        <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>      <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' -->
+        <xsl:variable name="state" as="item()+">
+          <xsl:choose>
+            <xsl:when test="$state[$p:error]">
+              <xsl:sequence select="$state"/>
+            </xsl:when>
+            <xsl:when test="$state[$p:l1] = 4">                                     <!-- NMToken -->
+              <xsl:variable name="state" select="p:memoized($state, 2)"/>
+              <xsl:choose>
+                <xsl:when test="$state[$p:lk] != 0">
+                  <xsl:sequence select="$state"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:variable name="backtrack" select="$state"/>
+                  <xsl:variable name="state" select="p:strip-result($state)"/>
+                  <xsl:variable name="state" select="p:try-Feature($input, $state)"/>
+                  <xsl:choose>
+                    <xsl:when test="not($state[$p:error])">
+                      <xsl:sequence select="p:memoize($backtrack, $state, -1, 2)"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:sequence select="p:memoize($backtrack, $state, -2, 2)"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:sequence select="($state[$p:l1], subsequence($state, 2))"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
         <xsl:choose>
-          <xsl:when test="$state[$p:l1] != 4">                                      <!-- NMToken -->
+          <xsl:when test="$state[$p:lk] != -1">
             <xsl:sequence select="$state"/>
           </xsl:when>
           <xsl:otherwise>
@@ -710,72 +1245,70 @@
 
     <xsl:variable name="count" select="count($state)"/>
     <xsl:variable name="begin" select="$state[$p:e0]"/>
-    <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>           <!-- '##CapabilitiesNeeded' | '##CreationDate' | '##Creator' | '##For' |
-                                                                                         '##Frames' | '##RenderMan' | '##Scene' | '##Shaders' | '##Textures' -->
     <xsl:variable name="state" as="item()+">
       <xsl:choose>
         <xsl:when test="$state[$p:error]">
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 13">                                        <!-- '##RenderMan' -->
-          <xsl:variable name="state" select="p:shift(13, $input, $state)"/>         <!-- '##RenderMan' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+        <xsl:when test="$state[$p:l1] = 15">                                        <!-- '##RenderMan' -->
+          <xsl:variable name="state" select="p:shift(15, $input, $state)"/>         <!-- '##RenderMan' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>     <!-- Name -->
           <xsl:variable name="state" select="p:shift(1, $input, $state)"/>          <!-- Name -->
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 14">                                        <!-- '##Scene' -->
-          <xsl:variable name="state" select="p:shift(14, $input, $state)"/>         <!-- '##Scene' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+        <xsl:when test="$state[$p:l1] = 16">                                        <!-- '##Scene' -->
+          <xsl:variable name="state" select="p:shift(16, $input, $state)"/>         <!-- '##Scene' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>     <!-- Name -->
           <xsl:variable name="state" select="p:shift(1, $input, $state)"/>          <!-- Name -->
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 10">                                        <!-- '##Creator' -->
-          <xsl:variable name="state" select="p:shift(10, $input, $state)"/>         <!-- '##Creator' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+        <xsl:when test="$state[$p:l1] = 12">                                        <!-- '##Creator' -->
+          <xsl:variable name="state" select="p:shift(12, $input, $state)"/>         <!-- '##Creator' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>     <!-- Name -->
           <xsl:variable name="state" select="p:shift(1, $input, $state)"/>          <!-- Name -->
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 9">                                         <!-- '##CreationDate' -->
-          <xsl:variable name="state" select="p:shift(9, $input, $state)"/>          <!-- '##CreationDate' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+        <xsl:when test="$state[$p:l1] = 11">                                        <!-- '##CreationDate' -->
+          <xsl:variable name="state" select="p:shift(11, $input, $state)"/>         <!-- '##CreationDate' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:lookahead1(2, $input, $state)"/>     <!-- DateTime -->
           <xsl:variable name="state" select="p:shift(3, $input, $state)"/>          <!-- DateTime -->
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 11">                                        <!-- '##For' -->
-          <xsl:variable name="state" select="p:shift(11, $input, $state)"/>         <!-- '##For' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+        <xsl:when test="$state[$p:l1] = 13">                                        <!-- '##For' -->
+          <xsl:variable name="state" select="p:shift(13, $input, $state)"/>         <!-- '##For' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:lookahead1(0, $input, $state)"/>     <!-- Name -->
           <xsl:variable name="state" select="p:shift(1, $input, $state)"/>          <!-- Name -->
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 12">                                        <!-- '##Frames' -->
-          <xsl:variable name="state" select="p:shift(12, $input, $state)"/>         <!-- '##Frames' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+        <xsl:when test="$state[$p:l1] = 14">                                        <!-- '##Frames' -->
+          <xsl:variable name="state" select="p:shift(14, $input, $state)"/>         <!-- '##Frames' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:lookahead1(1, $input, $state)"/>     <!-- Number -->
           <xsl:variable name="state" select="p:shift(2, $input, $state)"/>          <!-- Number -->
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 16">                                        <!-- '##Textures' -->
-          <xsl:variable name="state" select="p:shift(16, $input, $state)"/>         <!-- '##Textures' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+        <xsl:when test="$state[$p:l1] = 18">                                        <!-- '##Textures' -->
+          <xsl:variable name="state" select="p:shift(18, $input, $state)"/>         <!-- '##Textures' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:parse-StructuralHint-1($input, $state)"/>
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 15">                                        <!-- '##Shaders' -->
-          <xsl:variable name="state" select="p:shift(15, $input, $state)"/>         <!-- '##Shaders' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+        <xsl:when test="$state[$p:l1] = 17">                                        <!-- '##Shaders' -->
+          <xsl:variable name="state" select="p:shift(17, $input, $state)"/>         <!-- '##Shaders' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:parse-StructuralHint-2($input, $state)"/>
           <xsl:sequence select="$state"/>
         </xsl:when>
@@ -783,9 +1316,9 @@
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:variable name="state" select="p:shift(8, $input, $state)"/>          <!-- '##CapabilitiesNeeded' -->
-          <xsl:variable name="state" select="p:lookahead1(4, $input, $state)"/>     <!-- WS -->
-          <xsl:variable name="state" select="p:shift(5, $input, $state)"/>          <!-- WS -->
+          <xsl:variable name="state" select="p:shift(10, $input, $state)"/>         <!-- '##CapabilitiesNeeded' -->
+          <xsl:variable name="state" select="p:lookahead1(5, $input, $state)"/>     <!-- WS -->
+          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- WS -->
           <xsl:variable name="state" select="p:parse-StructuralHint-3($input, $state)"/>
           <xsl:sequence select="$state"/>
         </xsl:otherwise>
@@ -812,15 +1345,15 @@
         <xsl:sequence select="$state"/>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:variable name="state" select="p:lookahead1(7, $input, $state)"/>       <!-- WS | NL | EOF | '##CapabilitiesNeeded' | '##CreationDate' |
+        <xsl:variable name="state" select="p:lookahead1(10, $input, $state)"/>      <!-- NMToken | WS | NL | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
                                                                                          '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
                                                                                          '##Shaders' | '##Textures' -->
         <xsl:choose>
-          <xsl:when test="$state[$p:l1] != 5">                                      <!-- WS -->
+          <xsl:when test="$state[$p:l1] != 6">                                      <!-- WS -->
             <xsl:sequence select="$state"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:variable name="state" select="p:shift(5, $input, $state)"/>        <!-- WS -->
+            <xsl:variable name="state" select="p:shift(6, $input, $state)"/>        <!-- WS -->
             <xsl:sequence select="p:parse-Command-1($input, $state)"/>
           </xsl:otherwise>
         </xsl:choose>
@@ -848,8 +1381,8 @@
         <xsl:when test="$state[$p:error]">
           <xsl:sequence select="$state"/>
         </xsl:when>
-        <xsl:when test="$state[$p:l1] = 6">                                         <!-- NL -->
-          <xsl:variable name="state" select="p:shift(6, $input, $state)"/>          <!-- NL -->
+        <xsl:when test="$state[$p:l1] = 7">                                         <!-- NL -->
+          <xsl:variable name="state" select="p:shift(7, $input, $state)"/>          <!-- NL -->
           <xsl:sequence select="$state"/>
         </xsl:when>
         <xsl:otherwise>
@@ -862,7 +1395,7 @@
   </xsl:function>
 
   <!--~
-   ! Parse the 1st loop of production Preamble (one or more). Use
+   ! Parse the 1st loop of production Preamble (zero or more). Use
    ! tail recursion for iteratively updating the parser state.
    !
    ! @param $input the input string.
@@ -878,16 +1411,64 @@
         <xsl:sequence select="$state"/>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:variable name="state" select="p:parse-Command($input, $state)"/>
-        <xsl:variable name="state" select="p:lookahead1(6, $input, $state)"/>       <!-- EOF | '##CapabilitiesNeeded' | '##CreationDate' | '##Creator' |
-                                                                                         '##For' | '##Frames' | '##RenderMan' | '##Scene' | '##Shaders' |
-                                                                                         '##Textures' -->
+        <xsl:variable name="state" select="p:lookahead1(9, $input, $state)"/>       <!-- NMToken | '#' | '##CapabilitiesNeeded' | '##CreationDate' |
+                                                                                         '##Creator' | '##For' | '##Frames' | '##RenderMan' | '##Scene' |
+                                                                                         '##Shaders' | '##Textures' -->
         <xsl:choose>
-          <xsl:when test="$state[$p:l1] = 7">                                       <!-- EOF -->
+          <xsl:when test="$state[$p:l1] = 4">                                       <!-- NMToken -->
             <xsl:sequence select="$state"/>
           </xsl:when>
           <xsl:otherwise>
+            <xsl:variable name="state" as="item()+">
+              <xsl:choose>
+                <xsl:when test="$state[$p:error]">
+                  <xsl:sequence select="$state"/>
+                </xsl:when>
+                <xsl:when test="$state[$p:l1] = 9">                                 <!-- '#' -->
+                  <xsl:variable name="state" select="p:parse-Comment($input, $state)"/>
+                  <xsl:sequence select="$state"/>
+                </xsl:when>
+                <xsl:when test="$state[$p:error]">
+                  <xsl:sequence select="$state"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:variable name="state" select="p:parse-Command($input, $state)"/>
+                  <xsl:sequence select="$state"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
             <xsl:sequence select="p:parse-Preamble-1($input, $state)"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
+  <!--~
+   ! Parse the 2nd loop of production Preamble (zero or more). Use
+   ! tail recursion for iteratively updating the parser state.
+   !
+   ! @param $input the input string.
+   ! @param $state the parser state.
+   ! @return the updated parser state.
+  -->
+  <xsl:function name="p:parse-Preamble-2" as="item()+">
+    <xsl:param name="input" as="xs:string"/>
+    <xsl:param name="state" as="item()+"/>
+
+    <xsl:choose>
+      <xsl:when test="$state[$p:error]">
+        <xsl:sequence select="$state"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:variable name="state" select="p:lookahead1(6, $input, $state)"/>       <!-- EOF | 'Declare' -->
+        <xsl:choose>
+          <xsl:when test="$state[$p:l1] != 20">                                     <!-- 'Declare' -->
+            <xsl:sequence select="$state"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:variable name="state" select="p:parse-Declaration($input, $state)"/>
+            <xsl:sequence select="p:parse-Preamble-2($input, $state)"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:otherwise>
@@ -908,6 +1489,8 @@
     <xsl:variable name="count" select="count($state)"/>
     <xsl:variable name="begin" select="$state[$p:e0]"/>
     <xsl:variable name="state" select="p:parse-Preamble-1($input, $state)"/>
+    <xsl:variable name="state" select="p:parse-Version($input, $state)"/>
+    <xsl:variable name="state" select="p:parse-Preamble-2($input, $state)"/>
     <xsl:variable name="end" select="$state[$p:e0]"/>
     <xsl:sequence select="p:reduce($state, 'Preamble', $count, $begin, $end)"/>
   </xsl:function>
@@ -926,7 +1509,7 @@
     <xsl:variable name="count" select="count($state)"/>
     <xsl:variable name="begin" select="$state[$p:e0]"/>
     <xsl:variable name="state" select="p:parse-Preamble($input, $state)"/>
-    <xsl:variable name="state" select="p:shift(7, $input, $state)"/>                <!-- EOF -->
+    <xsl:variable name="state" select="p:shift(8, $input, $state)"/>                <!-- EOF -->
     <xsl:variable name="end" select="$state[$p:e0]"/>
     <xsl:sequence select="p:reduce($state, 'RIB', $count, $begin, $end)"/>
   </xsl:function>
@@ -1235,7 +1818,7 @@
         <xsl:variable name="errors" select="($state[$p:memo], $state[$p:error])[.]"/>
         <xsl:sequence select="$errors[@e = max($errors/xs:integer(@e))][last()]/@*, $state[$p:memo]/value"/>
         <xsl:element name="value">
-          <xsl:attribute name="key" select="$backtrack[$p:e0] * 4 + $i"/>
+          <xsl:attribute name="key" select="$backtrack[$p:e0] * 8 + $i"/>
           <xsl:sequence select="$v"/>
         </xsl:element>
       </xsl:element>
@@ -1260,7 +1843,7 @@
     <xsl:param name="state" as="item()+"/>
     <xsl:param name="i" as="xs:integer"/>
 
-    <xsl:variable name="value" select="data($state[$p:memo]/value[@key = $state[$p:e0] * 4 + $i])"/>
+    <xsl:variable name="value" select="data($state[$p:memo]/value[@key = $state[$p:e0] * 8 + $i])"/>
     <xsl:sequence select="
       if ($value) then $value else 0,
       subsequence($state, $p:lk + 1)
