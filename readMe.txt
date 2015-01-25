@@ -7,6 +7,10 @@ using bottlecap's Rex parser generator.
 
 Parser type: LL1 with Backtracking
 
+Commandline:
+
+> -backtrack -xslt -main  -tree -ll 1
+
 ## Scope
 
 * Preamble and global variable declarations (RIB requests: version, declare)
