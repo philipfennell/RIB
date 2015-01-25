@@ -26,12 +26,12 @@ import java.util.zip.GZIPInputStream;
  * output.
  *
  * @author Gunther Rademacher <a href="mailto:grd@gmx.net">grd@gmx.net</a>
- * @version 5.32.925
+ * @version 5.30.820
  */
 public class REx
 {
   private static final String REX_URL = "http://www.bottlecaps.de/rex/";
-  private static final String USER_AGENT = "REx command line client v5.32.925";
+  private static final String USER_AGENT = "REx command line client v5.30.820";
   private static final String UTF_8 = "UTF-8";
   private static final Collection<String> VALUE_OPTIONS =
     new HashSet<String>(Arrays.asList(new String[]{"-a", "-ll", "-name", "-interface"}));
