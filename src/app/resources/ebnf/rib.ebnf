@@ -2,9 +2,9 @@
 RIB
         ::= Preamble EOF
 Preamble
-        ::= Command+
+        ::= ( Command | Comment )* Version Declaration*
 Command    
-        ::= StructuralHint WS* NL?
+        ::= ( StructuralHint ) WS* NL?
 StructuralHint
         ::= ( ('##RenderMan' WS Name) | ('##Scene' WS Name) | ('##Creator' WS Name) | 
               ('##CreationDate' WS DateTime) | ('##For' WS Name)|  ('##Frames' WS Number) | 
@@ -15,18 +15,24 @@ Texture
         ::= NMToken ','? WS?
 Feature
         ::= NMToken ','? WS?
-          
+Comment
+        ::= '#' Name WS* NL?
+Version
+        ::= NMToken WS Number WS* NL?
+Declaration
+        ::= 'Declare' (WS String)+
+        
 <?TOKENS?>
 
 Name    ::= ( [^#x000A#x000D#x000C\"] | WS | NONASCII | ESCAPE )*
+/* Text    ::= ( [^#x000A#x000D#x000C\"] | WS | NONASCII | ESCAPE )* */
 Number
         ::= [0-9]+
 DateTime
         ::= ( [^#x000A#x000D#x000C\"] | WS | NONASCII | ESCAPE )*
 NMToken
-        ::= [a-zA-Z]*
-
-STRING  
+        ::= [a-zA-Z]+
+String  
         ::= ( STRING1 | STRING2 )
 STRING1 
         ::= '"' ( [^#x000A#x000D#x000C\"] | '\' | NONASCII | ESCAPE )* '"'
