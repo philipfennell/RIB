@@ -6,3 +6,5 @@
 ##Frames 2
 ##Shaders PIXARmarble, PIXARwood, MyUserShader
 ##CapabilitiesNeeded ShadingLanguage Displacements
+version 3
+Declare "d" "uniform point"
